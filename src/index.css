@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-tn-navy: #0b2545;
+  --color-tn-navy-dark: #081c33;
+  --color-tn-navy-light: #133a6b;
+  --color-tn-gold: #c29b38;
+  --color-tn-gold-light: #e4be5c;
+  --color-tn-maroon: #7c1c1d;
+  --color-tn-sand: #f8fafc;
+  --color-tn-border: #cbd5e1;
+  --color-tn-surface: #f1f5f9;
+
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  background-color: #f8fafc;
+  color: #0f172a;
+  font-family: var(--font-sans);
+  min-height: 100vh;
+}
+
+/* Custom scrollbar for government data tables and plan viewers */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.tn-govt-header {
+  background: linear-gradient(135deg, #0b2545 0%, #133a6b 100%);
+}
+
+.tn-badge-seal {
+  border: 1px solid rgba(194, 155, 56, 0.4);
+  background: rgba(194, 155, 56, 0.08);
+}

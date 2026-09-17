@@ -1,0 +1,14 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /plans/{appId}/{allPaths=**} {
+      // Authenticated users can upload and view drawings
+      allow read, write: if request.auth != null;
+    }
+    match /certificates/{appId}/{allPaths=**} {
+      // Public read for digital sanction certificate verification
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+  }
+}
